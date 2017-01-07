@@ -15,15 +15,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the user clicks the Accept button */
+    /*
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-     /*   EditText editText = (EditText) findViewById(R.id.edit_message); */
-     /*   String message = editText.getText().toString(); */
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
         String message = "funny msg";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
 
     }
+    */
 
     /** Called when the user clicks the Quit button */
     public void openCalculations(View view) {
@@ -35,5 +37,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void quit(View view) {
+        finish();
+    }
+
 
 }
