@@ -17,12 +17,7 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user clicks the Accept button */
     public void openCalculations(View view) {
         Intent intent = new Intent(this, calculations.class);
-     /*   EditText editText = (EditText) findViewById(R.id.edit_message); */
-     /*   String message = editText.getText().toString(); */
-     /*   String message = "funny msg"; */
-     /*   intent.putExtra(EXTRA_MESSAGE, message); */
         startActivity(intent);
-
     }
 
     /** Called when the user clicks the Quit button */

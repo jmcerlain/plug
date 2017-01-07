@@ -14,7 +14,8 @@
     <Button android:id="@+id/bestmix_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bestmix_label" />
+        android:text="@string/bestmix_label"
+        android:onClick="showBestmix"/>
 
     <Button android:id="@+id/mod_button"
         android:layout_width="fill_parent"

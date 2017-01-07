@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".calculations"></activity>
+        <activity android:name=".calculations" />
+        <activity android:name=".bestmix"></activity>
     </application>
 
 </manifest>
