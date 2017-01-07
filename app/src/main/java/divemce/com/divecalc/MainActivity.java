@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.EditText;
+
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /** Called when the user clicks the Send button */
+    /** Called when the user clicks the Accept button */
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
      /*   EditText editText = (EditText) findViewById(R.id.edit_message); */
@@ -24,4 +24,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    /** Called when the user clicks the Quit button */
+    public void openCalculations(View view) {
+        Intent intent = new Intent(this, calculations.class);
+     /*   EditText editText = (EditText) findViewById(R.id.edit_message); */
+     /*   String message = editText.getText().toString(); */
+     /*   String message = "funny msg"; */
+     /*   intent.putExtra(EXTRA_MESSAGE, message); */
+        startActivity(intent);
+
+    }
+
 }

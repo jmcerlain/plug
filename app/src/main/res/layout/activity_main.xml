@@ -49,6 +49,8 @@ android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:text="@string/quit_label"
+    android:onClick="openCalculations"
+
     />
 
 </LinearLayout>
