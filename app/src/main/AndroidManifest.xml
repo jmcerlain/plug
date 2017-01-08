@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".calculations" />
-        <activity android:name=".bestmix"></activity>
+        <activity android:name=".bestmix" />
+        <activity android:name=".mod"></activity>
     </application>
 
 </manifest>

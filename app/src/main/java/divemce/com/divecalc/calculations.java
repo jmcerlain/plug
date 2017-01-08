@@ -13,9 +13,15 @@ public class calculations extends AppCompatActivity {
         setContentView(R.layout.activity_calculations);
     }
 
-    /** Called when the user clicks the Accept button */
+    /** Called when the user clicks the Best Mix button */
     public void showBestmix(View view) {
         Intent intent = new Intent(this, bestmix.class);
+        startActivity(intent);
+    }
+
+    /** Called when the user clicks the Max Operating Depth button */
+    public void showMod(View view) {
+        Intent intent = new Intent(this, mod.class);
         startActivity(intent);
     }
 }

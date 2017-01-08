@@ -20,7 +20,8 @@
     <Button android:id="@+id/mod_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mod_label" />
+        android:text="@string/mod_label"
+        android:onClick="showMod"/>
 
     <Button android:id="@+id/ppo2_button"
         android:layout_width="fill_parent"
