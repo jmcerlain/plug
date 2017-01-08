@@ -26,7 +26,8 @@
     <Button android:id="@+id/ppo2_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ppo2_calc_label" />
+        android:text="@string/ppo2_calc_label"
+        android:onClick="showPpo2"/>
 
     <Button android:id="@+id/ead_button"
         android:layout_width="fill_parent"

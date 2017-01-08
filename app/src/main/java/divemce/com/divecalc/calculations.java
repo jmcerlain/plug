@@ -24,4 +24,11 @@ public class calculations extends AppCompatActivity {
         Intent intent = new Intent(this, mod.class);
         startActivity(intent);
     }
+
+    //Called when the user clicks the PO2 button */
+    public void showPpo2(View view) {
+        Intent intent = new Intent(this, ppo2.class);
+        startActivity(intent);
+    }
+
 }
