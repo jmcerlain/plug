@@ -18,7 +18,8 @@
         <activity android:name=".calculations" />
         <activity android:name=".bestmix" />
         <activity android:name=".mod" />
-        <activity android:name=".ppo2"></activity>
+        <activity android:name=".ppo2" />
+        <activity android:name=".ead"></activity>
     </application>
 
 </manifest>

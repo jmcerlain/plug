@@ -32,7 +32,8 @@
     <Button android:id="@+id/ead_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ead_label" />
+        android:text="@string/ead_label"
+        android:onClick="showEad"/>
 
 
 </LinearLayout>

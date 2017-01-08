@@ -31,4 +31,10 @@ public class calculations extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Called when the user clicks the PO2 button */
+    public void showEad(View view) {
+        Intent intent = new Intent(this, ead.class);
+        startActivity(intent);
+    }
+
 }
