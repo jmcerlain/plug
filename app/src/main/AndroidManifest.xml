@@ -15,11 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".calculations" />
-        <activity android:name=".bestmix" />
-        <activity android:name=".mod" />
-        <activity android:name=".ppo2" />
-        <activity android:name=".ead"></activity>
+
+        <activity android:name=".calculations" android:label="@string/ab_calculations_label" />
+        <activity android:name=".bestmix" android:label="@string/ab_bestmix_label" />
+        <activity android:name=".mod" android:label="@string/ab_mod_label" />
+        <activity android:name=".ppo2" android:label="@string/ab_ppo2_label" />
+        <activity android:name=".ead" android:label="@string/ab_ead_label"></activity>
     </application>
 
 </manifest>
