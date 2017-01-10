@@ -51,11 +51,7 @@ public class mod extends AppCompatActivity implements OnClickListener {
         View calcButton = findViewById(R.id.calc_button);
         calcButton.setOnClickListener(this);
 
-        View quitButton = findViewById(R.id.quit_button);
-        quitButton.setOnClickListener(this);
-
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
-
 
         Spinner fswffwspinner = (Spinner) findViewById(R.id.fswffwspinner);
 
@@ -147,10 +143,6 @@ public class mod extends AppCompatActivity implements OnClickListener {
 
     public void onClick(View v) {
         switch (v.getId()) {
-
-            case R.id.quit_button:
-                finish();
-                break;
 
             case R.id.calc_button:
                 CalcIt();

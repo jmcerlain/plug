@@ -52,12 +52,7 @@ public class ppo2 extends AppCompatActivity implements OnClickListener {
         View calcButton = findViewById(R.id.calc_button);
         calcButton.setOnClickListener(this);
 
-        View quitButton = findViewById(R.id.quit_button);
-        quitButton.setOnClickListener(this);
-
-
         Spinner fswffwspinner = (Spinner) findViewById(R.id.fswffwspinner);
-
 
         ArrayAdapter<CharSequence> adapterfswffw = ArrayAdapter.createFromResource(
                 this, R.array.fswffw_array, android.R.layout.simple_spinner_dropdown_item);
@@ -184,10 +179,6 @@ public class ppo2 extends AppCompatActivity implements OnClickListener {
 
     public void onClick(View v) {
         switch (v.getId()) {
-
-            case R.id.quit_button:
-                finish();
-                break;
 
             case R.id.calc_button:
                 CalcIt();
