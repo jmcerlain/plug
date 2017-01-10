@@ -35,8 +35,6 @@
 
     <string name="btn_calc_label">Calc</string>
     <string name="btn_reset_label">Reset</string>
-    <string name="btn_quit_label">Quit</string>
-
 
   	<string name="disclaimer_text">
   	This application is for entertainment purposes only. It is NOT intended for actual dive planning.
@@ -54,7 +52,7 @@
 
 
     <string-array name="fswffw_array">
-        <item>Salt</item>
-        <item>Fresh</item>
+        <item>Salt Water</item>
+        <item>Fresh Water</item>
     </string-array>
 </resources>
