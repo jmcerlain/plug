@@ -30,7 +30,7 @@ public class ppo2 extends AppCompatActivity {
 */
 
 
-public class ppo2 extends Activity implements OnClickListener {
+public class ppo2 extends AppCompatActivity implements OnClickListener {
 
     private int fo2 = 32;
     private int depth = 60;

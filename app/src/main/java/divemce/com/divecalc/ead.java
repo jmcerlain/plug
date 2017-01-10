@@ -30,7 +30,7 @@ public class ead extends AppCompatActivity {
 
 */
 
-public class ead extends Activity implements OnClickListener {
+public class ead extends AppCompatActivity implements OnClickListener {
 
     private int fo2 = 32;
     private int depth = 60;

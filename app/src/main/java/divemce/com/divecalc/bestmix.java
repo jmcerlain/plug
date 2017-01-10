@@ -28,8 +28,11 @@ public class bestmix extends AppCompatActivity {
     }
 }
 */
-
+/*
 public class bestmix extends Activity implements OnClickListener {
+* */
+
+public class bestmix extends AppCompatActivity implements OnClickListener {
 
     private double ppo2 = 1.4;
     private int depth = 60;

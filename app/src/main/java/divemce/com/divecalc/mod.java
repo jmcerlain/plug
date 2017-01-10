@@ -29,7 +29,7 @@ public class mod extends AppCompatActivity {
 }
 */
 
-public class mod extends Activity implements OnClickListener {
+public class mod extends AppCompatActivity implements OnClickListener {
 
     private double ppo2 = 1.4;
     private int fo2 = 32;
