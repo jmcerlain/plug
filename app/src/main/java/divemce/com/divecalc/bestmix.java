@@ -49,6 +49,9 @@ public class bestmix extends AppCompatActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bestmix);
 
+
+
+
         // Setup listeners
 
         View calcButton = findViewById(R.id.calc_button);
