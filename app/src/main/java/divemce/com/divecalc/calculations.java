@@ -56,7 +56,8 @@ public class calculations extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_help:
                 //Pop up Toast warning if depth blank
-
+                Intent intent = new Intent(this, about.class);
+                this.startActivity(intent);
                 return true;
 
             case R.id.action_about:
