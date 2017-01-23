@@ -55,4 +55,5 @@
         <item>Salt Water</item>
         <item>Fresh Water</item>
     </string-array>
+    <string name="title_activity_about">About DiveCalc</string>
 </resources>

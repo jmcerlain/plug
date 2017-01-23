@@ -15,28 +15,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".calculations"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/ab_calculations_label" />
-
-
-        <activity android:name=".bestmix"
-            android:parentActivityName=".calculations"
-            android:label="@string/ab_bestmix_label" />
-
-        <activity android:name=".mod"
-            android:parentActivityName=".calculations"
-            android:label="@string/ab_mod_label" />
-
-        <activity android:name=".ppo2"
-            android:parentActivityName=".calculations"
-            android:label="@string/ab_ppo2_label" />
-
-
-        <activity android:name=".ead"
-            android:parentActivityName=".calculations"
-            android:label="@string/ab_ead_label"></activity>
+        <activity
+            android:name=".calculations"
+            android:label="@string/ab_calculations_label"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".bestmix"
+            android:label="@string/ab_bestmix_label"
+            android:parentActivityName=".calculations" />
+        <activity
+            android:name=".mod"
+            android:label="@string/ab_mod_label"
+            android:parentActivityName=".calculations" />
+        <activity
+            android:name=".ppo2"
+            android:label="@string/ab_ppo2_label"
+            android:parentActivityName=".calculations" />
+        <activity
+            android:name=".ead"
+            android:label="@string/ab_ead_label"
+            android:parentActivityName=".calculations" />
+        <activity
+            android:name=".about"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
