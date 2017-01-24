@@ -48,8 +48,13 @@
   	\ All calculations should be verified by other sources.
   	</string>
 
-
+    <string name="title_activity_about">About DiveCalc</string>
     <string name="about_ver">version &ver;</string>
+    <string name="about_divide">--------------------------------------------------------------</string>
+    <string name="about_line_1">SCUBA Dive Calculator</string>
+    <string name="about_line_2">version &ver;</string>
+    <string name="about_line_3">build id &build_id;</string>
+    <string name="about_line_4">2017 DiveMcE. All rights reserved</string>
 
 
     <string-array name="ppo2_array">
@@ -65,5 +70,5 @@
         <item>Salt Water</item>
         <item>Fresh Water</item>
     </string-array>
-    <string name="title_activity_about">About DiveCalc</string>
+
 </resources>
