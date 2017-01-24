@@ -54,13 +54,13 @@ public class calculations extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_help:
+            case R.id.action_about:
                 //Pop up Toast warning if depth blank
                 Intent intent = new Intent(this, about.class);
                 this.startActivity(intent);
                 return true;
 
-            case R.id.action_about:
+            case R.id.action_help:
                 //Pop up Toast warning if depth blank
                 LayoutInflater inflater = getLayoutInflater();
                 View layout = inflater.inflate(R.layout.toast_layout,
