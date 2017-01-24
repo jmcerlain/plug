@@ -1,8 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY ver "2.3">
+    <!ENTITY build_id "20170120-1216">
+    ]>
+
 <resources>
-        <string name="hello">
+
+
+    <string name="hello">
     <b><i>DISCLAIMER:</i></b>
     </string>
-
     <string name="app_name">DiveCalc</string>
 
     <string name="resultmod_label">MOD</string>
@@ -40,6 +47,9 @@
   	This application is for entertainment purposes only. It is NOT intended for actual dive planning.
   	\ All calculations should be verified by other sources.
   	</string>
+
+
+    <string name="about_ver">version &ver;</string>
 
 
     <string-array name="ppo2_array">
