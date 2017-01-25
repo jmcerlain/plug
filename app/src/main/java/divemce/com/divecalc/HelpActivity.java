@@ -12,8 +12,6 @@ public class HelpActivity extends AppCompatActivity {
 
     String strHelpName = new String();
 
-    private int help_id;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +19,7 @@ public class HelpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_help);
 
         strHelpName = this.getIntent().getStringExtra("help_name");
+        this.setTitle("help " + strHelpName);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
