@@ -10,7 +10,7 @@ import android.view.ViewStub;
 
 public class HelpActivity extends AppCompatActivity {
 
-    private int help_id = 0;
+    private int help_id = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,26 @@ public class HelpActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        switch (help_id) {
+            case 1:
+                ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
+                stub.setLayoutResource(R.layout.content_help);
+                View inflated = stub.inflate();
+                break;
+
+            case 2:
+                ViewStub stub2 = (ViewStub) findViewById(R.id.layout_stub);
+                stub2.setLayoutResource(R.layout.content_help_best);
+                View inflated2 = stub2.inflate();
+                break;
+
+            default:
+                break;
+        }
+
+/*
 
         if (help_id == 0) {
             ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
@@ -31,7 +51,7 @@ public class HelpActivity extends AppCompatActivity {
             View inflated = stub.inflate();
         }
 
-
+*/
 
 
 
