@@ -10,6 +10,8 @@ import android.view.ViewStub;
 
 public class HelpActivity extends AppCompatActivity {
 
+    private int help_id = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +20,20 @@ public class HelpActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
-        stub.setLayoutResource(R.layout.content_help);
-        View inflated = stub.inflate();
+        if (help_id == 0) {
+            ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
+            stub.setLayoutResource(R.layout.content_help);
+            View inflated = stub.inflate();
+        }
+        else {
+            ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
+            stub.setLayoutResource(R.layout.content_help_best);
+            View inflated = stub.inflate();
+        }
+
+
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
