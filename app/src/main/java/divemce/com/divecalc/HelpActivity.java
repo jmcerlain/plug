@@ -10,7 +10,10 @@ import android.view.ViewStub;
 
 public class HelpActivity extends AppCompatActivity {
 
-    private int help_id = 2;
+    String strTmp = new String();
+
+    private int help_id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,9 @@ public class HelpActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        strTmp = "1";
+        help_id = Integer.valueOf(strTmp);
 
         switch (help_id) {
             case 1:
