@@ -63,6 +63,7 @@ public class calculations extends AppCompatActivity {
             case R.id.action_help:
                 //Pop up Toast warning if depth blank
                 Intent intentHelp = new Intent(this, HelpActivity.class);
+                intentHelp.putExtra("help_name","calculations");
                 this.startActivity(intentHelp);
                 return true;
 

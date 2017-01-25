@@ -20,11 +20,13 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
+        strHelpName = this.getIntent().getStringExtra("help_name");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        strHelpName = "bestmix";
+       // strHelpName = "bestmix";
 
         switch (strHelpName) {
             case "calculations":
@@ -43,20 +45,7 @@ public class HelpActivity extends AppCompatActivity {
                 break;
         }
 
-/*
 
-        if (help_id == 0) {
-            ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
-            stub.setLayoutResource(R.layout.content_help);
-            View inflated = stub.inflate();
-        }
-        else {
-            ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
-            stub.setLayoutResource(R.layout.content_help_best);
-            View inflated = stub.inflate();
-        }
-
-*/
 
 
 
