@@ -10,7 +10,7 @@ import android.view.ViewStub;
 
 public class HelpActivity extends AppCompatActivity {
 
-    String strTmp = new String();
+    String strHelpName = new String();
 
     private int help_id;
 
@@ -24,17 +24,16 @@ public class HelpActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        strTmp = "1";
-        help_id = Integer.valueOf(strTmp);
+        strHelpName = "bestmix";
 
-        switch (help_id) {
-            case 1:
+        switch (strHelpName) {
+            case "calculations":
                 ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
                 stub.setLayoutResource(R.layout.content_help);
                 View inflated = stub.inflate();
                 break;
 
-            case 2:
+            case "bestmix":
                 ViewStub stub2 = (ViewStub) findViewById(R.id.layout_stub);
                 stub2.setLayoutResource(R.layout.content_help_best);
                 View inflated2 = stub2.inflate();
