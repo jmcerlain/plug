@@ -24,13 +24,10 @@ public class HelpActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-       // strHelpName = "bestmix";
-
         switch (strHelpName) {
             case "calculations":
                 ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
-                stub.setLayoutResource(R.layout.content_help);
+                stub.setLayoutResource(R.layout.content_help_calc);
                 View inflated = stub.inflate();
                 break;
 
