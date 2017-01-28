@@ -21,6 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <!-- draw line across entire width -->
     <View
         android:id="@+id/View"
         android:layout_below="@+id/imageView"
