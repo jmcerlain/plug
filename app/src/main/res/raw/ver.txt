@@ -1,0 +1,4 @@
+Ver Code - Ver Name
+2 - 2.0 - initial release from eclipse build
+3 - 2.3 - UI redesign with android studio
+4 - 2.4 - help and about info
