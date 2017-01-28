@@ -198,13 +198,13 @@ public class bestmix extends AppCompatActivity implements OnClickListener {
                 this.startActivity(intent);
                 return true;
 
+            /*
             case R.id.action_help:
-                //Pop up Toast warning if depth blank
                 Intent intentHelp = new Intent(this, HelpActivity.class);
                 intentHelp.putExtra("help_name","bestmix");
                 this.startActivity(intentHelp);
                 return true;
-
+            */
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
