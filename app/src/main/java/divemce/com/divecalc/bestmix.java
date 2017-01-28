@@ -193,18 +193,16 @@ public class bestmix extends AppCompatActivity implements OnClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_about:
-                //Pop up Toast warning if depth blank
                 Intent intent = new Intent(this, about.class);
                 this.startActivity(intent);
                 return true;
 
-            /*
             case R.id.action_help:
                 Intent intentHelp = new Intent(this, HelpActivity.class);
-                intentHelp.putExtra("help_name","bestmix");
+                intentHelp.putExtra("help_name","BestMix");
                 this.startActivity(intentHelp);
                 return true;
-            */
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.

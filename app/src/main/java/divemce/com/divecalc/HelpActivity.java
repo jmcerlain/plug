@@ -30,14 +30,11 @@ public class HelpActivity extends AppCompatActivity {
                 View inflated = stub.inflate();
                 break;
 
-            /*
-            case "bestmix":
+            case "BestMix":
                 ViewStub stub2 = (ViewStub) findViewById(R.id.layout_stub);
                 stub2.setLayoutResource(R.layout.content_help_best);
                 View inflated2 = stub2.inflate();
                 break;
-            */
-
 
             default:
                 break;
