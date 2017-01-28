@@ -150,6 +150,38 @@
 
         "\t SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
 
+
+
+        <b><u>PRESSURE OF OXYGEN(PO2):</u></b>
+
+        "Calculates the pressure of oxygen for a nitrox mixture at a given depth. "
+		"After setting the parameters, press the CALC button to display the pressure of oxygen "
+        "next to the green PO2 label.\n\n"
+
+		"\t Parameters:\n\n  "
+
+        "\t O2% is the oxygen content of the nitrox gas. Avalaible options are 10 through 100.\n\n"
+
+        "\t FEET is the maximun depth.\n\n"
+
+        "\t SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
+
+
+
+        <b><u>EQUIVALENT AIR DEPTH(EAD):</u></b>
+
+        "Calculates the equivalent air depth of a nitrox mixture. "
+		"After setting the parameters, press the CALC button to display the equivalent air depth "
+        "next to the green EAD label.\n\n"
+
+		"\t Parameters:\n\n  "
+
+        "\t O2% is the oxygen content of the nitrox gas. Avalaible options are 10 through 100.\n\n"
+
+        "\t FEET is the maximun depth.\n\n"
+
+        "\t SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
+
 		
     </string>
 
