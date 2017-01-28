@@ -48,7 +48,6 @@
 
     <string name="title_activity_about">About DiveCalc</string>
     <string name="about_ver">version &ver;</string>
-    <string name="about_divide">--------------------------------------------------------------</string>
     <string name="about_line_1">SCUBA Dive Calculator</string>
     <string name="about_line_2">version &ver;</string>
     <string name="about_line_3">build id &build_id;</string>
