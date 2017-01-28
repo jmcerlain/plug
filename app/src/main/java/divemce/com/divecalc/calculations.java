@@ -59,13 +59,12 @@ public class calculations extends AppCompatActivity {
                 this.startActivity(intent);
                 return true;
 
-            /*
             case R.id.action_help:
                 Intent intentHelp = new Intent(this, HelpActivity.class);
                 intentHelp.putExtra("help_name","calculations");
                 this.startActivity(intentHelp);
                 return true;
-            */
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
