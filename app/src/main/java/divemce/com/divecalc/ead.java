@@ -232,19 +232,9 @@ public class ead extends AppCompatActivity implements OnClickListener {
                 return true;
 
             case R.id.action_help:
-                //Pop up Toast warning if depth blank
-                LayoutInflater inflater = getLayoutInflater();
-                View layout = inflater.inflate(R.layout.toast_layout,
-                        (ViewGroup) findViewById(R.id.toast_layout_root));
-
-                TextView text = (TextView) layout.findViewById(R.id.text);
-                text.setText("Please Enter Depth");
-
-                Toast toast = new Toast(getApplicationContext());
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
-                toast.setDuration(Toast.LENGTH_SHORT);
-                toast.setView(layout);
-                toast.show();
+                Intent intentHelp = new Intent(this, HelpActivity.class);
+                intentHelp.putExtra("help_name","EAD");
+                this.startActivity(intentHelp);
                 return true;
 
             default:
