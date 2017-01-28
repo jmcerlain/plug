@@ -61,7 +61,7 @@ public class calculations extends AppCompatActivity {
 
             case R.id.action_help:
                 Intent intentHelp = new Intent(this, HelpActivity.class);
-                intentHelp.putExtra("help_name","calculations");
+                intentHelp.putExtra("help_name","Calculations");
                 this.startActivity(intentHelp);
                 return true;
 
