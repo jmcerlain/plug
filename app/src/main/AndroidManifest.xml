@@ -42,6 +42,10 @@
         <activity
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TopoffActivity"
+            android:label="@string/title_activity_topoff"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

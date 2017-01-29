@@ -35,5 +35,11 @@
         android:text="@string/ead_label"
         android:onClick="showEad"/>
 
+    <Button android:id="@+id/topoff_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/topoff"
+        android:onClick="showTopoff"/>
+
 
 </LinearLayout>

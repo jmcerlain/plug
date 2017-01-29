@@ -15,16 +15,17 @@
     <string name="resultead_label">EAD</string>
     <string name="mix_label">O2 </string>
 
-
+    <!-- button labels -->
     <string name="accept_label">Accept</string>
     <string name="quit_label">Quit</string>
-
-    <string name="o2_label">O2%</string>
     <string name="bestmix_label">Best Mix Oxygen (O2)</string>
-    <string name="calculations_label">DiveCalc: Calculations</string>
     <string name="mod_label">Max Operating Depth (MOD)</string>
     <string name="ppo2_calc_label">Pressure of Oxygen (PO2)</string>
     <string name="ead_label">Equivalent Air Depth (EAD)</string>
+    <string name="topoff">Gas Topoff</string>
+
+    <string name="o2_label">O2%</string>
+    <string name="calculations_label">DiveCalc: Calculations</string>
     <string name="fswffw_label">Salt/Fresh</string>
 
     <!-- action bar labels -->
@@ -204,5 +205,6 @@
     </string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_topoff">TopoffActivity</string>
 
 </resources>

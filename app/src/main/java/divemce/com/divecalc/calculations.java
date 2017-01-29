@@ -45,6 +45,12 @@ public class calculations extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Called when the user clicks the Gas TopOff button */
+    public void showTopoff(View view) {
+        Intent intent = new Intent(this, TopoffActivity.class);
+        startActivity(intent);
+    }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.calculations_menu,menu);
