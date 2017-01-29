@@ -45,7 +45,7 @@
     <string name="gas_hdr_side2_label">Current mix:</string>
     <string name="gas_hdr_side3_label">Topoff to:</string>
     <string name="gas_hdr_side4_label">Topoff with:</string>
-    <string name="gas_hdr_side5_label">New Mix:</string>
+    <string name="gas_hdr_side6_label">New Mix:</string>
 
 
     <string name="btn_calc_label">Calc</string>

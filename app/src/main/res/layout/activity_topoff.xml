@@ -114,8 +114,31 @@
 
         </TableRow>
 
+        <!-- Row 4 -->
+        <TableRow>
 
-        <!-- Row 3 is blank -->
+            <TextView
+                android:text="@string/gas_hdr_side4_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textSize="16sp"
+                android:typeface="monospace"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/top_o2_field"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:inputType="phone"
+                android:digits="0123456789"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:text="21"
+            />
+        </TableRow>
+
+        <!-- Row 5 is blank -->
         <TableRow>
             <TextView
                 android:text="@string/blank_label"
@@ -124,10 +147,10 @@
         </TableRow>
 
 
-        <!-- Row 4 -->
+        <!-- Row 6 -->
         <TableRow>
             <TextView
-                android:text="@string/mix_label"
+                android:text="@string/gas_hdr_side6_label"
                 android:textColor="@color/hilite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
