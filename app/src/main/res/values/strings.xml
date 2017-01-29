@@ -34,10 +34,19 @@
     <string name="ab_mod_label">DiveCalc - MOD</string>
     <string name="ab_ppo2_label">DiveCalc - PO2</string>
     <string name="ab_ead_label">DiveCalc - EAD</string>
+    <string name="ab_topoff_label">DiveCalc - Gas TopOff</string>
 
     <string name="ppo2_label">PO2</string>
     <string name="depth_label">Feet</string>
     <string name="blank_label"></string>
+
+    <string name="gas_hdr_top2_label">O2 %</string>
+    <string name="gas_hdr_top3_label">PSI</string>
+    <string name="gas_hdr_side2_label">Current mix:</string>
+    <string name="gas_hdr_side3_label">Topoff to:</string>
+    <string name="gas_hdr_side4_label">Topoff with:</string>
+    <string name="gas_hdr_side5_label">New Mix:</string>
+
 
     <string name="btn_calc_label">Calc</string>
     <string name="btn_reset_label">Reset</string>
