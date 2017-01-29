@@ -1,0 +1,21 @@
+see E:\Android_distribute\build_checklist.txt
+
+
+Update build.gradle (module:app)
+---------------------------------------
+- version code (integer, user not see)
+- version name (string, user sees)
+
+
+Update strings.xml
+---------------------------------------
+- set doc type at top (version and build_id)
+- version and build_id used for about window
+- version and build_id should match build.gradle
+- verify info shows in about window
+
+
+Update ver.txt
+---------------------------------------
+- location = /res/raw
+- documentation only, not used in app
