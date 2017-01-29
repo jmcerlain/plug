@@ -47,7 +47,7 @@ public class calculations extends AppCompatActivity {
 
     //Called when the user clicks the Gas TopOff button */
     public void showTopoff(View view) {
-        Intent intent = new Intent(this, TopoffActivity.class);
+        Intent intent = new Intent(this, topoff.class);
         startActivity(intent);
     }
 
