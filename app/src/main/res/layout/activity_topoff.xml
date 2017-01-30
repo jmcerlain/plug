@@ -23,7 +23,7 @@
                 android:text="@string/blank_label"
                 android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:typeface="monospace"
                 android:textStyle="bold"/>
 
@@ -31,7 +31,7 @@
                 android:text="@string/gas_hdr_top2_label"
                 android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:typeface="monospace"
                 android:textStyle="bold"/>
 
@@ -39,7 +39,7 @@
                 android:text="@string/gas_hdr_top3_label"
                 android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:typeface="monospace"
                 android:textStyle="bold"/>
         </TableRow>
@@ -52,7 +52,7 @@
                 android:text="@string/gas_hdr_side2_label"
                 android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:typeface="monospace"
                 android:textStyle="bold"/>
 
@@ -61,6 +61,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
+                android:textSize="17sp"
                 android:inputType="phone"
                 android:digits="0123456789"
                 android:maxLines="1"
@@ -73,6 +74,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
+                android:textSize="17sp"
                 android:inputType="phone"
                 android:digits="0123456789"
                 android:maxLines="1"
@@ -82,21 +84,22 @@
 
         </TableRow>
 
+
         <!-- Row 3 -->
         <TableRow>
             <TextView
                 android:text="@string/gas_hdr_side3_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:typeface="normal"/>
+                android:typeface="monospace"/>
 
             <TextView
                 android:text="@string/blank_label"
                 android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:typeface="monospace"
                 android:textStyle="bold"/>
             
@@ -104,6 +107,7 @@
                 android:id="@+id/top_psi"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textSize="17sp"
                 android:lines="1"
                 android:inputType="phone"
                 android:digits="0123456789"
@@ -121,7 +125,7 @@
                 android:text="@string/gas_hdr_side4_label"
                 android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:typeface="monospace"
                 android:textStyle="bold"/>
 
@@ -130,6 +134,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
+                android:textSize="17sp"
                 android:inputType="phone"
                 android:digits="0123456789"
                 android:maxLines="1"

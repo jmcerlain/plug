@@ -36,6 +36,10 @@
             android:label="@string/ab_ead_label"
             android:parentActivityName=".calculations" />
         <activity
+            android:name=".topoff"
+            android:label="@string/ab_topoff_label"
+            android:parentActivityName=".calculations" />
+        <activity
             android:name=".about"
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -43,7 +47,6 @@
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".topoff"></activity>
     </application>
 
 </manifest>

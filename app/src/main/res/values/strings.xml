@@ -40,7 +40,7 @@
     <string name="depth_label">Feet</string>
     <string name="blank_label"></string>
 
-    <string name="gas_hdr_top2_label">O2 %</string>
+    <string name="gas_hdr_top2_label">O2%</string>
     <string name="gas_hdr_top3_label">PSI</string>
     <string name="gas_hdr_side2_label">Current mix:</string>
     <string name="gas_hdr_side3_label">Topoff to:</string>
