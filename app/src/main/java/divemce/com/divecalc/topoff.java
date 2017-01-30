@@ -32,7 +32,7 @@ public class topoff extends AppCompatActivity {
 
             case R.id.action_help:
                 Intent intentHelp = new Intent(this, HelpActivity.class);
-                intentHelp.putExtra("help_name","BestMix");
+                intentHelp.putExtra("help_name","Gas TopOff");
                 this.startActivity(intentHelp);
                 return true;
 

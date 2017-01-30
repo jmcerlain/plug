@@ -54,6 +54,12 @@ public class HelpActivity extends AppCompatActivity {
                 View inflated5 = stub5.inflate();
                 break;
 
+            case "Gas TopOff":
+                ViewStub stub6 = (ViewStub) findViewById(R.id.layout_stub);
+                stub6.setLayoutResource(R.layout.content_help_topoff);
+                View inflated6 = stub6.inflate();
+                break;
+
             default:
                 break;
         }

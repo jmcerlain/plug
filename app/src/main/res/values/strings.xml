@@ -144,6 +144,15 @@
         "SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
 
     </string>
+
+
+        <string name="help_top">
+
+        "Calculates new nitrox mixture. "
+
+        "from old mix and psi for top off with mix and psi.\n\n\n\n"
+
+    </string>
 	
 <string name="help_calculations">
         "The following calculations are available by pressing their respective buttons.\n\n"
