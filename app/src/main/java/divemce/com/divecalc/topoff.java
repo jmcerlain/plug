@@ -6,14 +6,55 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-public class topoff extends AppCompatActivity {
+public class topoff extends AppCompatActivity implements View.OnClickListener {
+
+    private int depth = 60;
+    private double results = 33.0;
+
+    String strResults = new String();
+    String strTmp = new String();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topoff);
+
+        // Setup listeners
+
+        View calcButton = findViewById(R.id.calc_button);
+        calcButton.setOnClickListener(this);
+
+  //      EditText e = (EditText) findViewById(R.id.depth_field);
+  //      e.addTextChangedListener(new bestmix.CustomTextWatcher(e));
+
+
     }
+
+
+    // temp dummy CalcIt
+    private void CalcIt() {
+            strResults = "29.4";
+            strResults = strResults + " %";
+            TextView t = (TextView) findViewById(R.id.result_field);
+            t.setText(strResults);
+        }
+
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+            case R.id.calc_button:
+                CalcIt();
+                break;
+        }
+    }
+
 
 
     public boolean onCreateOptionsMenu(Menu menu) {
