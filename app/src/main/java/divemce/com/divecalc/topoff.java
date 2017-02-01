@@ -18,8 +18,11 @@ import android.widget.TextView;
 
 
 public class topoff extends AppCompatActivity implements View.OnClickListener {
-
     private double cur_mix_pct = 0;
+    private double top_mix_pct = 0;
+    private int cur_mix_psi = 0;
+    private int top_mix_psi = 0;
+
     private double results = 0;
 
     String strResults = new String();
@@ -42,6 +45,16 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         e.addTextChangedListener(new topoff.CustomTextWatcher(e));
 
+        EditText f = (EditText) findViewById(R.id.top_o2_field);
+        f.addTextChangedListener(new topoff.TopTextWatcher(f));
+
+        EditText g = (EditText) findViewById(R.id.cur_psi_field);
+        g.addTextChangedListener(new topoff.CurPsiTextWatcher(g));
+
+        EditText h = (EditText) findViewById(R.id.top_psi_field);
+        h.addTextChangedListener(new topoff.TopPsiTextWatcher(h));
+
+
 
     }
     private class CustomTextWatcher implements TextWatcher {
@@ -59,6 +72,55 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
+    private class TopTextWatcher implements TextWatcher {
+        private EditText mEditText;
+        public TopTextWatcher(EditText f) {
+            mEditText = f;     }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            //ShowMsg();
+        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            ClearResults();
+        }
+        public void afterTextChanged(Editable s) {
+            //ShowMsg();
+        }
+    }
+
+    private class CurPsiTextWatcher implements TextWatcher {
+        private EditText mEditText;
+        public CurPsiTextWatcher(EditText g) {
+            mEditText = g;     }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            //ShowMsg();
+        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            ClearResults();
+        }
+        public void afterTextChanged(Editable s) {
+            //ShowMsg();
+        }
+    }
+
+
+    private class TopPsiTextWatcher implements TextWatcher {
+        private EditText mEditText;
+        public TopPsiTextWatcher(EditText h) {
+            mEditText = h;     }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            //ShowMsg();
+        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            ClearResults();
+        }
+        public void afterTextChanged(Editable s) {
+            //ShowMsg();
+        }
+    }
+
+
+
+
     private void ClearResults() {
         TextView t = (TextView) findViewById(R.id.result_field);
         t.setText(" ");
@@ -66,18 +128,31 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
     // temp dummy CalcIt
     private void CalcIt() {
-        EditText e = (EditText) findViewById(R.id.cur_o2_field);
-
-        strTmp = "0" + String.valueOf( e.getText());
         //cur_mix_pct = Integer.parseInt(strTmp);
-
         //NumberFormat nf = NumberFormat.getInstance();
-
         //cur_mix_pct = nf.parse(strTmp);
 
+        EditText e = (EditText) findViewById(R.id.cur_o2_field);
+        strTmp = "0" + String.valueOf( e.getText());
         cur_mix_pct = Float.parseFloat(strTmp);
 
-        results = cur_mix_pct + 11.1;
+        EditText f = (EditText) findViewById(R.id.top_o2_field);
+        strTmp = "0" + String.valueOf( f.getText());
+        top_mix_pct = Float.parseFloat(strTmp);
+
+        EditText g = (EditText) findViewById(R.id.cur_psi_field);
+        strTmp = "0" + String.valueOf( g.getText());
+        cur_mix_psi = Integer.parseInt(strTmp);
+
+        EditText h = (EditText) findViewById(R.id.top_psi_field);
+        strTmp = "0" + String.valueOf( h.getText());
+        top_mix_psi = Integer.parseInt(strTmp);
+
+
+
+
+
+        results = cur_mix_pct + top_mix_pct + cur_mix_psi + top_mix_psi+ 0.1;
 
 
         strResults= String.valueOf(results);
@@ -101,6 +176,7 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
     }
 
 
+    // Menu Code Begin
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -129,4 +205,6 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
         }
     }
+
+    // Menu Code End
 }

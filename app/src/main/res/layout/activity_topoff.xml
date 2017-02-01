@@ -104,7 +104,7 @@
                 android:textStyle="bold"/>
             
             <EditText
-                android:id="@+id/top_psi"
+                android:id="@+id/top_psi_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17sp"
