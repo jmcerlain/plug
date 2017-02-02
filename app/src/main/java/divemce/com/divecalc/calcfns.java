@@ -11,4 +11,16 @@ public class calcfns {
         return d;
     }
 
+    // convert string to double
+    // if not valid, return 0
+    public  static final double str_to_double (String strval){
+        try {
+            double d = Double.parseDouble(strval);
+            return d;
+        }
+        catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+
 }

@@ -146,7 +146,10 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         strTmp = "0" + String.valueOf( e.getText());
 
 
-        cur_mix_pct = calcfns.str2double(strTmp);
+       // cur_mix_pct = calcfns.str2double(strTmp);
+        cur_mix_pct = calcfns.str_to_double(strTmp);
+
+
         //cur_mix_pct = Float.parseFloat(strTmp);
 
 
