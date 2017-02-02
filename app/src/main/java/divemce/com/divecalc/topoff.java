@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,6 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 //float f = Float.parseFloat("25");
@@ -42,8 +47,13 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         View calcButton = findViewById(R.id.calc_button);
         calcButton.setOnClickListener(this);
 
+
+
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         e.addTextChangedListener(new topoff.CustomTextWatcher(e));
+
+        e.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(3,1)});
+
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
         f.addTextChangedListener(new topoff.TopTextWatcher(f));
@@ -134,7 +144,11 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         strTmp = "0" + String.valueOf( e.getText());
-        cur_mix_pct = Float.parseFloat(strTmp);
+
+
+        cur_mix_pct = calcfns.str2double(strTmp);
+        //cur_mix_pct = Float.parseFloat(strTmp);
+
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
         strTmp = "0" + String.valueOf( f.getText());
@@ -151,9 +165,8 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
 
 
-
-        results = cur_mix_pct + top_mix_pct + cur_mix_psi + top_mix_psi+ 0.1;
-
+        //results = cur_mix_pct + top_mix_pct + cur_mix_psi + top_mix_psi+ 0.1;
+        results = cur_mix_pct + 2.2;
 
         strResults= String.valueOf(results);
 
@@ -207,4 +220,28 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
     }
 
     // Menu Code End
+
+
+
+    public class DecimalDigitsInputFilter implements InputFilter {
+
+        Pattern mPattern;
+
+        public DecimalDigitsInputFilter(int digitsBeforeZero,int digitsAfterZero) {
+            mPattern=Pattern.compile("[0-9]{0," + (digitsBeforeZero-1) + "}+((\\.[0-9]{0," + (digitsAfterZero-1) + "})?)||(\\.)?");
+        }
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+
+            Matcher matcher=mPattern.matcher(dest);
+            if(!matcher.matches())
+                return "";
+            return null;
+        }
+
+    }
+
+
+
 }
