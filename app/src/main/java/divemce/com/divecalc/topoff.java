@@ -52,7 +52,7 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         e.addTextChangedListener(new topoff.CustomTextWatcher(e));
 
-        e.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(3,1)});
+        e.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(4,1)});
 
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
