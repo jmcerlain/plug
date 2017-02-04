@@ -8,8 +8,16 @@
     <color name="black">#000000</color>
     <!-- red -->
     <color name="warning">#FF0000</color>
+
+    <!-- results -->
+
     <!-- lime -->
-    <color name="hilite">#00FF00</color>
+    <!--
+   <color name="hilite">#00FF00</color>
+   -->
+
+    <!-- lime -->
+    <color name="hilite">#303F9F</color>
 
 
 </resources>
