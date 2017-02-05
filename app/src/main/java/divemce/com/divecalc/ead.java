@@ -208,7 +208,7 @@ public class ead extends AppCompatActivity implements OnClickListener {
 
             case R.id.calc_button:
                 //CalcIt();
-                
+
                 WarnMsg(getString(R.string.warn_msg_cur_top_psi));
                 break;
         }
