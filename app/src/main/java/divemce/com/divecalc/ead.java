@@ -109,6 +109,21 @@ public class ead extends AppCompatActivity implements OnClickListener {
     }
 
 
+    private void WarnMsg(String wmsg)
+    {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_layout,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
+
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(wmsg);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
+    }
 
 
 
@@ -192,7 +207,8 @@ public class ead extends AppCompatActivity implements OnClickListener {
         switch (v.getId()) {
 
             case R.id.calc_button:
-                CalcIt();
+                //CalcIt();
+                WarnMsg("Warning message method");
                 break;
         }
     }
