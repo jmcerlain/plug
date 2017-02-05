@@ -96,7 +96,21 @@ public class mod extends AppCompatActivity implements OnClickListener {
     }
 
 
+    private void WarnMsg(String wmsg)
+    {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_layout,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
 
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(wmsg);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
+    }
 
 
     private void CalcIt() {
@@ -110,19 +124,7 @@ public class mod extends AppCompatActivity implements OnClickListener {
 
         if ((fo2 < 10) | (fo2 > 100))
         {
-            //Pop up Toast warning if fo2 blank
-            LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
-
-            TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("O2 from 10 to 100 only");
-
-            Toast toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setView(layout);
-            toast.show();
+			WarnMsg(getString(R.string.warn_msg_o2_pct));
         }
         else
         {

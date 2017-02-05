@@ -106,7 +106,21 @@ public class ppo2 extends AppCompatActivity implements OnClickListener {
         }
     }
 
+    private void WarnMsg(String wmsg)
+    {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_layout,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
 
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(wmsg);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
+    }
 
 
 
@@ -126,38 +140,14 @@ public class ppo2 extends AppCompatActivity implements OnClickListener {
         if ((fo2 < 10) | (fo2 > 100))
         {
             goodInput = false;
-            //Pop up Toast warning if fo2 blank
-            LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
-
-            TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("O2 from 10 to 100 only");
-
-            Toast toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setView(layout);
-            toast.show();
+			WarnMsg(getString(R.string.warn_msg_o2_pct));
         }
 
 
         if ((depth == 0) & (goodInput))
         {
             goodInput = false;
-            //Pop up Toast warning if depth blank
-            LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
-
-            TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Please Enter Depth");
-
-            Toast toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setView(layout);
-            toast.show();
+			WarnMsg(getString(R.string.warn_msg_depth));
         }
 
 
@@ -169,7 +159,6 @@ public class ppo2 extends AppCompatActivity implements OnClickListener {
             strResults = String.valueOf(results);
             TextView t = (TextView) findViewById(R.id.result_field);
             t.setText(strResults);
-
         }
 
     }

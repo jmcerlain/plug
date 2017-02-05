@@ -145,38 +145,14 @@ public class ead extends AppCompatActivity implements OnClickListener {
         if ((fo2 < 10) | (fo2 > 100))
         {
             goodInput = false;
-            //Pop up Toast warning if fo2 blank
-            LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
-
-            TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("O2 from 10 to 100 only");
-
-            Toast toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setView(layout);
-            toast.show();
+			WarnMsg(getString(R.string.warn_msg_o2_pct));
         }
 
 
         if ((depth == 0) & (goodInput))
         {
             goodInput = false;
-            //Pop up Toast warning if depth blank
-            LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
-
-            TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Please Enter Depth");
-
-            Toast toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 4);
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setView(layout);
-            toast.show();
+			WarnMsg(getString(R.string.warn_msg_depth));
         }
 
 
@@ -207,9 +183,7 @@ public class ead extends AppCompatActivity implements OnClickListener {
         switch (v.getId()) {
 
             case R.id.calc_button:
-                //CalcIt();
-
-                WarnMsg(getString(R.string.warn_msg_cur_top_psi));
+                CalcIt();                
                 break;
         }
     }
@@ -243,7 +217,6 @@ public class ead extends AppCompatActivity implements OnClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_about:
-                //Pop up Toast warning if depth blank
                 Intent intent = new Intent(this, about.class);
                 this.startActivity(intent);
                 return true;
