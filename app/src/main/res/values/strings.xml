@@ -85,11 +85,13 @@
     <!--  <string name="warn_msg_depth">enter a valid depth</string> -->
      <string name="warn_msg_depth">Please Enter Depth</string>
 
-     <string name="warn_msg_cur_psi">enter valid current psi > 0</string>
-     <string name="warn_msg_top_psi">enter valid topoff psi > 0</string>
+     <string name="warn_msg_cur_psi">Enter current psi</string>
+     <string name="warn_msg_top_psi">Enter topoff psi</string>
      <string name="warn_msg_cur_o2_pct">current O2 from 10 to 100</string>
      <string name="warn_msg_top_o2_pct">topoff O2 from 10 to 100</string>
-     <string name="warn_msg_cur_top_psi">topoff psi must be > current psi</string>
+
+    <!--   <string name="warn_msg_cur_top_psi">topoff less than current psi</string> -->
+    <string name="warn_msg_cur_top_psi">topoff psi less than current</string>
 
 
      <string name="title_activity_help">HelpActivity</string>
