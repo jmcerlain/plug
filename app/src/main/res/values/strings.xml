@@ -87,8 +87,8 @@
 
      <string name="warn_msg_cur_psi">Enter current psi</string>
      <string name="warn_msg_top_psi">Enter topoff psi</string>
-     <string name="warn_msg_cur_o2_pct">current O2 from 10 to 100</string>
-     <string name="warn_msg_top_o2_pct">topoff O2 from 10 to 100</string>
+     <string name="warn_msg_cur_o2_pct">curr O2% from 10 to 100 only</string>
+     <string name="warn_msg_top_o2_pct">top O2% from 10 to 100 only</string>
 
     <!--   <string name="warn_msg_cur_top_psi">topoff less than current psi</string> -->
     <string name="warn_msg_cur_top_psi">topoff psi less than current</string>

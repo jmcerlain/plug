@@ -179,7 +179,7 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
         strTmp = "0" + String.valueOf( f.getText());
-        top_mix_pct = Float.parseFloat(strTmp);
+        top_mix_pct = calcfns.str_to_double(strTmp);
 
         EditText g = (EditText) findViewById(R.id.cur_psi_field);
         strTmp = "0" + String.valueOf( g.getText());
@@ -209,6 +209,19 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_cur_top_psi));
+        }
+				
+		if (((cur_mix_pct < 10) | (cur_mix_pct > 100)) & (goodInput))
+		{
+            goodInput = false;
+			WarnMsg(getString(R.string.warn_msg_cur_o2_pct));
+        }
+		
+		
+		if (((top_mix_pct < 10) | (top_mix_pct > 100)) & (goodInput))
+		{
+            goodInput = false;
+			WarnMsg(getString(R.string.warn_msg_top_o2_pct));
         }
 
 		
