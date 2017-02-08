@@ -27,12 +27,23 @@ import java.util.regex.Pattern;
 
 
 public class topoff extends AppCompatActivity implements View.OnClickListener {
+	 
+	// need for casting integer into double so we don't do integer division
+	private double multiplier = 1.0;
+
+	// new calculations
+	private int xtra_psi = 0;
+	private double cur_02_pounds = 0;
+	private double new_o2_pounds = 0;
+	private double total_o2_pounds = 0;
+    private double results = 0;
+
+	// from edit fields
     private double cur_mix_pct = 0;
     private double top_mix_pct = 0;
     private int cur_mix_psi = 0;
-    private int top_mix_psi = 0;
+    private int top_mix_psi = 0;	
 
-    private double results = 0;
 
     String strResults = new String();
     String strTmp = new String();
@@ -55,12 +66,11 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         e.addTextChangedListener(new topoff.CustomTextWatcher(e));
-
         e.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(4,1)});
-
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
         f.addTextChangedListener(new topoff.TopTextWatcher(f));
+		f.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(4,1)});
 
         EditText g = (EditText) findViewById(R.id.cur_psi_field);
         g.addTextChangedListener(new topoff.CurPsiTextWatcher(g));
@@ -153,29 +163,14 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         t.setText(" ");
     }
 
-    // temp dummy CalcIt
+
     private void CalcIt() {
 		boolean goodInput = true;
 		
-		
 		// get values from fields
-		
-		
-		
-        //cur_mix_pct = Integer.parseInt(strTmp);
-        //NumberFormat nf = NumberFormat.getInstance();
-        //cur_mix_pct = nf.parse(strTmp);
-
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         strTmp = "0" + String.valueOf( e.getText());
-
-
-       // cur_mix_pct = calcfns.str2double(strTmp);
         cur_mix_pct = calcfns.str_to_double(strTmp);
-
-
-        //cur_mix_pct = Float.parseFloat(strTmp);
-
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
         strTmp = "0" + String.valueOf( f.getText());
@@ -192,60 +187,52 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
         // validate values
 
-		if (cur_mix_psi < 1)
-        {
+		if (cur_mix_psi < 0) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_cur_psi));
         }
 
-
-        if ((top_mix_psi < 1) & (goodInput))
-        {
+        if ((top_mix_psi < 1) & (goodInput)) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_top_psi));
         }
 		
-		if ((top_mix_psi < cur_mix_psi) & (goodInput))
-        {
+		if ((top_mix_psi < cur_mix_psi) & (goodInput)) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_cur_top_psi));
         }
 				
-		if (((cur_mix_pct < 10) | (cur_mix_pct > 100)) & (goodInput))
-		{
+		if (((cur_mix_pct < 10) | (cur_mix_pct > 100)) & (goodInput)) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_cur_o2_pct));
         }
 		
 		
-		if (((top_mix_pct < 10) | (top_mix_pct > 100)) & (goodInput))
-		{
+		if (((top_mix_pct < 10) | (top_mix_pct > 100)) & (goodInput)) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_top_o2_pct));
         }
 
 		
 
-		if (goodInput)
-        {		
-			//results = cur_mix_pct + top_mix_pct + cur_mix_psi + top_mix_psi+ 0.1;
-			results = cur_mix_pct + 2.2;
+		if (goodInput) {
+			
+            xtra_psi = top_mix_psi - cur_mix_psi;
+            cur_02_pounds = cur_mix_psi * cur_mix_pct;
+            new_o2_pounds = xtra_psi * top_mix_pct;
+            total_o2_pounds = cur_02_pounds + new_o2_pounds;
+			
+			results = total_o2_pounds / top_mix_psi;
+			results = calcfns.roundDouble(results, 1);
 
 			strResults= String.valueOf(results);
-
-			// strResults = "29.4";
-			//    strResults = strResults + " %";
-
+			strResults = strResults + "%";
 
 			TextView t = (TextView) findViewById(R.id.result_field);
 			t.setText(strResults);			
 		}
-			
-			
-			
-			
-			
-        }
+        
+    }
 
 
     public void onClick(View v) {
