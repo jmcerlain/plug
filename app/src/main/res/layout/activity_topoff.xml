@@ -67,6 +67,7 @@
                 android:maxLines="1"
                 android:maxLength="4"
                 android:text="34"
+                android:imeOptions="actionGo"
                 />
 
             <EditText
@@ -80,6 +81,7 @@
                 android:maxLines="1"
                 android:maxLength="4"
                 android:text="1500"
+                android:imeOptions="actionGo"
                 />
 
         </TableRow>
@@ -114,6 +116,7 @@
                 android:maxLines="1"
                 android:maxLength="4"
                 android:text="3500"
+                android:imeOptions="actionGo"
                 />
 
         </TableRow>
@@ -140,6 +143,7 @@
                 android:maxLines="1"
                 android:maxLength="4"
                 android:text="21"
+                android:imeOptions="actionGo"
             />
         </TableRow>
 

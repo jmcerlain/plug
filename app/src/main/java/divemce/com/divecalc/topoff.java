@@ -8,12 +8,14 @@ import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +28,7 @@ import java.util.regex.Pattern;
 //String s = Float.toString(25.0f);
 
 
-public class topoff extends AppCompatActivity implements View.OnClickListener {
+public class topoff extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
 	 
 	// need for casting integer into double so we don't do integer division
 	private double multiplier = 1.0;
@@ -67,20 +69,27 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         EditText e = (EditText) findViewById(R.id.cur_o2_field);
         e.addTextChangedListener(new topoff.CustomTextWatcher(e));
         e.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(4,1)});
+        e.setOnEditorActionListener(this);
 
         EditText f = (EditText) findViewById(R.id.top_o2_field);
         f.addTextChangedListener(new topoff.TopTextWatcher(f));
 		f.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(4,1)});
+        f.setOnEditorActionListener(this);
 
         EditText g = (EditText) findViewById(R.id.cur_psi_field);
         g.addTextChangedListener(new topoff.CurPsiTextWatcher(g));
+        g.setOnEditorActionListener(this);
 
         EditText h = (EditText) findViewById(R.id.top_psi_field);
         h.addTextChangedListener(new topoff.TopPsiTextWatcher(h));
+        h.setOnEditorActionListener(this);
+
 
 
 
     }
+
+
     private class CustomTextWatcher implements TextWatcher {
         private EditText mEditText;
         public CustomTextWatcher(EditText e) {
@@ -141,6 +150,55 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
             //ShowMsg();
         }
     }
+	
+	
+	 @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        if (actionId == EditorInfo.IME_ACTION_GO) {
+             CalcIt();
+             return true;
+         }
+
+     //    if (actionId == EditorInfo.IME_ACTION_DONE) {
+     //        CalcIt();
+     //        return true;
+     //    }
+
+    //     if (actionId == EditorInfo.IME_ACTION_NEXT) {
+     //        CalcIt();
+      //       return true;
+      //   }
+
+     //    if (actionId == EditorInfo.IME_ACTION_SEND) {
+      //       CalcIt();
+       //      return true;
+      //   }
+
+     //    if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+     //        CalcIt();
+     //        return true;
+      //   }
+
+     //    if (actionId == EditorInfo.IME_ACTION_UNSPECIFIED) {
+     //        CalcIt();
+     //        return true;
+     //    }
+
+     //    if (actionId == EditorInfo.IME_ACTION_NONE) {
+      //       CalcIt();
+      //       return true;
+      //   }
+
+
+
+        return false;
+    }
+
+	
+	
+	
+	
+	
 
     private void WarnMsg(String wmsg)
     {
