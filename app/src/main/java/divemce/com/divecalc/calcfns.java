@@ -22,5 +22,18 @@ public class calcfns {
             return 0;
         }
     }
+	
+	
+	    // convert string to integer
+    // if not valid, return 0
+    public  static final int str_to_int (String strval){
+        try {
+            int i = Integer.parseInt(strval);
+            return i;
+        }
+        catch (NumberFormatException e) {
+            return -1;
+        }
+    }
 
 }

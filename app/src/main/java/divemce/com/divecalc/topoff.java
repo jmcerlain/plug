@@ -177,12 +177,12 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
         top_mix_pct = calcfns.str_to_double(strTmp);
 
         EditText g = (EditText) findViewById(R.id.cur_psi_field);
-        strTmp = "0" + String.valueOf( g.getText());
-        cur_mix_psi = Integer.parseInt(strTmp);
+        strTmp = String.valueOf( g.getText());
+        cur_mix_psi = calcfns.str_to_int(strTmp);
 
         EditText h = (EditText) findViewById(R.id.top_psi_field);
-        strTmp = "0" + String.valueOf( h.getText());
-        top_mix_psi = Integer.parseInt(strTmp);
+        strTmp = String.valueOf( h.getText());
+        top_mix_psi = calcfns.str_to_int(strTmp);
 
 
         // validate values
@@ -192,12 +192,12 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 			WarnMsg(getString(R.string.warn_msg_cur_psi));
         }
 
-        if ((top_mix_psi < 1) & (goodInput)) {
+        if ((top_mix_psi < 0) & (goodInput)) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_top_psi));
         }
 		
-		if ((top_mix_psi < cur_mix_psi) & (goodInput)) {
+		if ((top_mix_psi <= cur_mix_psi) & (goodInput)) {
             goodInput = false;
 			WarnMsg(getString(R.string.warn_msg_cur_top_psi));
         }
@@ -215,16 +215,15 @@ public class topoff extends AppCompatActivity implements View.OnClickListener {
 
 		
 
-		if (goodInput) {
+		 if (goodInput) {
 			
             xtra_psi = top_mix_psi - cur_mix_psi;
             cur_02_pounds = cur_mix_psi * cur_mix_pct;
             new_o2_pounds = xtra_psi * top_mix_pct;
-            total_o2_pounds = cur_02_pounds + new_o2_pounds;
-			
+            total_o2_pounds = cur_02_pounds + new_o2_pounds;			
 			results = total_o2_pounds / top_mix_psi;
 			results = calcfns.roundDouble(results, 1);
-
+	
 			strResults= String.valueOf(results);
 			strResults = strResults + "%";
 
