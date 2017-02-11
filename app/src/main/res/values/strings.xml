@@ -81,16 +81,11 @@
 
     <!-- Toast Warning Msgs -->
     <string name="warn_msg_o2_pct">O2 from 10 to 100 only</string>
-
-    <!--  <string name="warn_msg_depth">enter a valid depth</string> -->
      <string name="warn_msg_depth">Please Enter Depth</string>
-
      <string name="warn_msg_cur_psi">current psi not valid</string>
      <string name="warn_msg_top_psi">topoff psi not valid</string>
      <string name="warn_msg_cur_o2_pct">curr O2% from 10 to 100 only</string>
      <string name="warn_msg_top_o2_pct">top O2% from 10 to 100 only</string>
-
-    <!--   <string name="warn_msg_cur_top_psi">topoff less than current psi</string> -->
     <string name="warn_msg_cur_top_psi">curr psi must be &lt; topoff psi</string>
 
 
@@ -179,30 +174,12 @@
          "After setting the parameters, press the CALC button to display the best oxygen "
          "percent next to the green O2 label.\n\n"
 
-         "Parameters:\n\n"
-
-         "PO2 is the maximum desired pressure of oxygen. Avalaible options are 1.2, 1.3, 1.4, 1.5, 1.6 (default is 1.4).\n\n"
-
-         "FEET is the maximun depth.\n\n"
-
-         "SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
-
-
 
          <b><u>MAX OPERATING DEPTH(MOD):</u></b>
 
          "Calculates the deepest depth in feet for a nitrox mixture. After setting the "
          "parameters, press the CALC button to display the maximum operating depth next to the green "
          "MOD label.\n\n"
-
-         "Parameters:\n\n"
-
-         "PO2 is the maximum desired pressure of oxygen. Avalaible options are 1.2, 1.3, 1.4, 1.5, 1.6 (default is 1.4).\n\n"
-
-         "O2% is the oxygen content of the nitrox gas. Avalaible options are 10 through 100.\n\n"
-
-         "SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
-
 
 
          <b><u>PRESSURE OF OXYGEN(PO2):</u></b>
@@ -211,15 +188,6 @@
          "After setting the parameters, press the CALC button to display the pressure of oxygen "
          "next to the green PO2 label.\n\n"
 
-         "Parameters:\n\n"
-
-         "O2% is the oxygen content of the nitrox gas. Avalaible options are 10 through 100.\n\n"
-
-         "FEET is the maximun depth.\n\n"
-
-         "SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
-
-
 
          <b><u>EQUIVALENT AIR DEPTH(EAD):</u></b>
 
@@ -227,18 +195,15 @@
          "After setting the parameters, press the CALC button to display the equivalent air depth "
          "next to the green EAD label.\n\n"
 
-         "Parameters:\n\n"
 
-         "O2% is the oxygen content of the nitrox gas. Avalaible options are 10 through 100.\n\n"
+         <b><u>GAS TOPOFF:</u></b>
 
-         "FEET is the maximun depth.\n\n"
-
-         "SALT WATER / FRESH WATER is the type of water.\n\n\n\n"
-
+         "Calculates what the new oxygen percent would be after topping one gas off with another. "
+         "First set the oxygen percent and psi of the tank to be topped off. Then set the oxygen percent "
+         "of the gas being put on top of the current gas. Lastly, set the final psi that the current "
+         "tank is being topped up to and press the CALC button to display the results next to the "
+         "dark blue NEW MIX label.\n\n"
 
      </string>
-
-     <string name="action_settings">Settings</string>
-     <string name="title_activity_topoff">TopoffActivity</string>
 
  </resources>
