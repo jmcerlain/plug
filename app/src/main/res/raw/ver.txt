@@ -3,3 +3,4 @@ Ver Code - Ver Name
 3 - 2.3 - UI redesign with android studio
 4 - 2.4 - help and about info
 5 - 2.5 - change color of results field for better contrast
+6 - 3.0 - gas topoff function
